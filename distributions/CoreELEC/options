@@ -21,7 +21,7 @@
   GREETING4=""
 
 # Root password to integrate in the target system
-  ROOT_PASSWORD="coreelec"
+  ROOT_PASSWORD="root"
 
 # Install glibc locales to the build (yes / no)
   GLIBC_LOCALES="yes"
@@ -32,7 +32,7 @@
 # Skins to install (Estuary)
 # Space separated list is supported,
 # e.g. SKINS="Estuary"
-  SKINS="Estuary"
+  SKINS="Estuary Grid Bluerobot"
 
 # Default Skin (Estuary)
   SKIN_DEFAULT="Estuary"
@@ -235,4 +235,4 @@
   IR_REMOTE_PROTOCOLS="RC6 NEC"
 
 # IR remote keymaps supported in default config
-  IR_REMOTE_KEYMAPS="rc6_mce xbox_360 xbox_one"
+  IR_REMOTE_KEYMAPS="rc6_mce xbox_360 xbox_one a95x m8s"

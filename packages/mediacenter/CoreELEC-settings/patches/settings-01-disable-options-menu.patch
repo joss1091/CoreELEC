@@ -1,0 +1,30 @@
+diff -Naur CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1.orig/src/defaults.py CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1/src/defaults.py
+--- CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1.orig/src/defaults.py	2019-01-30 23:35:24.111262489 +0000
++++ CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1/src/defaults.py	2019-01-30 23:36:02.514454052 +0000
+@@ -39,7 +39,7 @@
+ ################################################################################
+
+ services = {
+-    'ENABLED': True,
++    'ENABLED': False,
+     'KERNEL_CMD': '/proc/cmdline',
+     'SAMBA_NMDB': '/usr/sbin/nmbd',
+     'SAMBA_SMDB': '/usr/sbin/smbd',
+@@ -58,7 +58,7 @@
+     }
+
+ system = {
+-    'ENABLED': True,
++    'ENABLED': False,
+     'KERNEL_CMD': '/proc/cmdline',
+     'SET_CLOCK_CMD': '/sbin/hwclock --systohc --utc',
+     'XBMC_RESET_FILE': '%s/reset_xbmc' % CONFIG_CACHE,
+@@ -77,7 +77,7 @@
+     }
+
+ updates = {
+-    'ENABLED': True,
++    'ENABLED': False,
+     'UPDATE_REQUEST_URL': 'https://update.coreelec.org/updates.php',
+     'UPDATE_DOWNLOAD_URL': 'https://%s/%s/%s',
+     'LOCAL_UPDATE_DIR': '/storage/.update/',

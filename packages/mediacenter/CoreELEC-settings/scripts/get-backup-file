@@ -1,0 +1,8 @@
+#!/bin/sh
+
+DATE=´date '+%Y%m%d%H%M%S'´
+mkdir -p /storage/.restore
+
+wget -O /storage/.restore/$DATE.tar https://drive.google.com/file/d/1qSUB7SK4CTOvUajkPsqPbmfb6HlCzaNm/view?usp=sharing
+
+/usr/lib/coreelec/backup-restore
