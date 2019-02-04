@@ -1,0 +1,21 @@
+diff -Naur kodi-18.0rc4-Leia.orig/system/settings/settings.xml kodi-18.0rc4-Leia/system/settings/settings.xml
+--- kodi-18.0rc4-Leia.orig/system/settings/settings.xml	2019-02-03 17:23:15.915184383 +0000
++++ kodi-18.0rc4-Leia/system/settings/settings.xml	2019-02-03 17:26:17.031184383 +0000
+@@ -3334,7 +3334,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="locale.timezonecountry" type="string" label="14079" help="36117">
+-          <level>1</level>
++          <level>0</level>
+           <default>default</default> <!-- will be properly set on startup -->
+           <constraints>
+             <options>timezonecountries</options>
+@@ -3342,7 +3342,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="locale.timezone" type="string" label="14080" help="36118">
+-          <level>1</level>
++          <level>0</level>
+           <default>default</default> <!-- will be properly set on startup -->
+           <constraints>
+             <options>timezones</options>

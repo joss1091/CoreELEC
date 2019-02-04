@@ -1,0 +1,39 @@
+diff -Naur kodi-18.0rc4-Leia.orig/system/settings/settings.xml kodi-18.0rc4-Leia/system/settings/settings.xml
+--- kodi-18.0rc4-Leia.orig/system/settings/settings.xml	2019-02-03 16:30:19.813828383 +0000
++++ kodi-18.0rc4-Leia/system/settings/settings.xml	2019-02-03 16:37:43.427524384 +0000
+@@ -3183,7 +3183,7 @@
+     <category id="skin" label="166" help="36102">
+       <group id="1" label="24997">
+         <setting id="lookandfeel.skin" type="addon" label="166" help="36103">
+-          <level>0</level>
++          <level>2</level>
+           <default>skin.estuary</default>
+           <constraints>
+             <addontype>xbmc.gui.skin</addontype>
+@@ -3193,7 +3193,7 @@
+           </control>
+         </setting>
+         <setting id="lookandfeel.skinsettings" type="action" parent="lookandfeel.skin" label="14261" help="36104">
+-          <level>0</level>
++          <level>2</level>
+           <dependencies>
+             <dependency type="enable" on="property" name="AddonHasSettings" setting="lookandfeel.skin" />
+           </dependencies>
+@@ -3498,7 +3498,7 @@
+       <access>CheckMasterLock</access>
+       <group id="1" label="16000">
+         <setting id="masterlock.lockcode" type="action" label="20100" help="36396">
+-          <level>1</level>
++          <level>2</level>
+           <control type="button" format="action">
+             <hidevalue>true</hidevalue>
+           </control>
+@@ -3527,7 +3527,7 @@
+       <group id="2" label="14227">
+         <setting id="lookandfeel.startupaction" type="integer" label="39100" help="36161">
+           <level>0</level>
+-          <default>0</default> <!-- STARTUP_ACTION_NONE -->
++          <default>1</default> <!-- STARTUP_ACTION_NONE -->
+           <constraints>
+             <options>
+               <option label="231">0</option> <!-- STARTUP_ACTION_NONE -->

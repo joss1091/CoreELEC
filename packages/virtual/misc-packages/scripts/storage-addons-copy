@@ -4,6 +4,6 @@ if [ ! -d /storage/.kodi/addons/skin.grid ]; then
     cp -r /usr/share/kodi/storage_addons/skin.grid /storage/.kodi/addons
 fi
 
-if [ ! -d /storage/.kodi/addons/skin.bluerobot ]; then
-    cp -r /usr/share/kodi/storage_addons/skin.bluerobot /storage/.kodi/addons
+if [ ! -d /storage/.kodi/addons/skin.ghost ]; then
+    cp -r /usr/share/kodi/storage_addons/skin.ghost /storage/.kodi/addons
 fi
