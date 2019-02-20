@@ -3,8 +3,8 @@
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="device-trees-amlogic"
-PKG_VERSION="8ba9e328a20c95db6466c73e5768f7d7c50a32da"
-PKG_SHA256="9c97d2c14b644868098092235c9b775d5d8bb2c979b2e488f88fa2c1a83603e5"
+PKG_VERSION="155dd5bd215d6daa042006ca69e607cc816459bf"
+PKG_SHA256="0dcdf2490899650cd21864bbe571fd66846160933960c91d340c96077955c850"
 PKG_LICENSE="GPL"
 PKG_SITE="https://github.com/CoreELEC/device-trees-amlogic"
 PKG_URL="https://github.com/CoreELEC/device-trees-amlogic/archive/$PKG_VERSION.tar.gz"
@@ -36,39 +36,14 @@ make_target() {
     DTB_LIST="$DTB_LIST $DTB_NAME"
   done
 
-  # Filter device tree list depending on project
-  case "$DEVICE" in
-    S905)
-      for f in ${DTB_LIST[@]}; do
-        [[ "$f" == gxbb* ]] || [[ "$f" == gxl* ]] && DTB_LIST_FILTERED="$DTB_LIST_FILTERED $f"
-      done
-      ;;
-    S912)
-      for f in ${DTB_LIST[@]}; do
-        [[ "$f" == gxm* ]] && DTB_LIST_FILTERED="$DTB_LIST_FILTERED $f"
-      done
-      ;;
-    *)
-      for f in ${DTB_LIST[@]}; do
-        if listcontains "$KERNEL_UBOOT_EXTRA_TARGET" "$f"; then
-          DTB_LIST_FILTERED="$DTB_LIST_FILTERED $f"
-        fi
-      done
-      ;;
-  esac
-
   # Compile device trees
-  kernel_make $DTB_LIST_FILTERED
+  kernel_make $DTB_LIST
   cp arch/$TARGET_KERNEL_ARCH/boot/dts/amlogic/*.dtb $PKG_BUILD
 
   popd > /dev/null
 }
 
 makeinstall_target() {
-  case "$DEVICE" in
-    S905|S912)
-      mkdir -p $INSTALL/usr/share/bootloader/device_trees
-      cp -a $PKG_BUILD/*.dtb $INSTALL/usr/share/bootloader/device_trees
-    ;;
-  esac
+  mkdir -p $INSTALL/usr/share/bootloader/device_trees
+  cp -a $PKG_BUILD/*.dtb $INSTALL/usr/share/bootloader/device_trees
 }

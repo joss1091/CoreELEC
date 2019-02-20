@@ -59,7 +59,7 @@ TARGET_VERSION="$LIBREELEC_ARCH-$LIBREELEC_VERSION"
 if [ -n "$CUSTOM_IMAGE_NAME" ]; then
   IMAGE_NAME="$CUSTOM_IMAGE_NAME"
 else
-  if [ "$DEVEL_VERSION" = "devel" ]; then
+  if [ "$DEVEL_VERSION" = "devel" ] && [ -z "$CUSTOM_VERSION" ]; then
     IMAGE_NAME="$DISTRONAME-$LIBREELEC_ARCH-$OS_VERSION-$LIBREELEC_VERSION"
   else
     IMAGE_NAME="$DISTRONAME-$TARGET_VERSION"
@@ -328,7 +328,7 @@ if [ "$1" = "release" -o "$1" = "mkimage" -o "$1" = "amlpkg" -o "$1" = "noobs" ]
       THREADS="$(nproc)"
     fi
     if [ -n "$SUBDEVICES" ]; then
-      SUBDEVICES+=" ${DEVICE:-$PROJECT}"
+      SUBDEVICES+=" Generic"
       for SUBDEVICE in $SUBDEVICES;do
         # variables used in image script must be passed
         sem --no-notice -j${THREADS} env \
