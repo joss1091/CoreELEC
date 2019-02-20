@@ -24,7 +24,7 @@ diff -Naur CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1.orig/src/d
 
  updates = {
 -    'ENABLED': True,
-+    'ENABLED': False,
++    'ENABLED': True,
      'UPDATE_REQUEST_URL': 'https://update.coreelec.org/updates.php',
      'UPDATE_DOWNLOAD_URL': 'https://%s/%s/%s',
      'LOCAL_UPDATE_DIR': '/storage/.update/',

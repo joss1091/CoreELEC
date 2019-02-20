@@ -18,5 +18,5 @@ post_install() {
 		enable_service storage-addons-copy.service
 
 		# ADDON_MANIFEST=$INSTALL/usr/share/kodi/system/addon-manifest.xml
-	  # xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.grid" $ADDON_MANIFEST
+	  # xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.ghost" $ADDON_MANIFEST
 	}

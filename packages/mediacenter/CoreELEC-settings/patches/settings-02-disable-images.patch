@@ -1,0 +1,43 @@
+diff -Naur CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1.orig/skins/Default/1080i/service-CoreELEC-Settings-mainWindow.xml CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1/skins/Default/1080i/service-CoreELEC-Settings-mainWindow.xml
+--- CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1.orig/skins/Default/1080i/service-CoreELEC-Settings-mainWindow.xml	2019-02-06 19:42:46.334413441 +0000
++++ CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1/skins/Default/1080i/service-CoreELEC-Settings-mainWindow.xml	2019-02-06 19:43:05.406413441 +0000
+@@ -101,15 +101,7 @@
+                 <height>3</height>
+                 <texture colordiffuse="FF12B2E7" border="2">dialogs/separator-grey.png</texture>
+             </control>
+-            <control type="image">
+-                <description>LOGO</description>
+-                <left>20</left>
+-                <top>760</top>
+-                <width>360</width>
+-                <height>150</height>
+-                <aspectratio>keep</aspectratio>
+-                <texture>$INFO[Window.Property(DIST_MEDIA)]/Logo.png</texture>
+-            </control>
++
+             <control type="group">
+                 <left>420</left>
+                 <top>138</top>
+@@ -1216,4 +1208,3 @@
+         </control>
+     </controls>
+ </window>
+-
+diff -Naur CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1.orig/skins/Default/1080i/service-CoreELEC-Settings-wizard.xml CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1/skins/Default/1080i/service-CoreELEC-Settings-wizard.xml
+--- CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1.orig/skins/Default/1080i/service-CoreELEC-Settings-wizard.xml	2019-02-06 19:42:46.334413441 +0000
++++ CoreELEC-settings-70994c7fe88be17c7af02ef1de380e02df541ac1/skins/Default/1080i/service-CoreELEC-Settings-wizard.xml	2019-02-06 19:43:19.974413441 +0000
+@@ -28,13 +28,7 @@
+                 <height>680</height>
+                 <texture border="15">default/floor.png</texture>
+             </control>
+-            <control type="image">
+-                <left>2</left>
+-                <top>2</top>
+-                <width>270</width>
+-                <height>676</height>
+-                <texture>default/wizard.png</texture>
+-            </control>
++
+             <control type="image">
+                 <left>268</left>
+                 <top>0</top>

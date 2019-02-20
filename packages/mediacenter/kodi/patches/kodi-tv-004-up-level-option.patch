@@ -1,0 +1,21 @@
+diff -Naur kodi-18.0rc4-Leia.orig/system/settings/settings.xml kodi-18.0rc4-Leia/system/settings/settings.xml
+--- kodi-18.0rc4-Leia.orig/system/settings/settings.xml	2019-02-15 21:29:35.559698775 +0000
++++ kodi-18.0rc4-Leia/system/settings/settings.xml	2019-02-15 21:29:43.863848776 +0000
+@@ -3526,7 +3526,7 @@
+     <category id="other" label="14224" help="36292">
+       <group id="2" label="14227">
+         <setting id="lookandfeel.startupaction" type="integer" label="39100" help="36161">
+-          <level>0</level>
++          <level>2</level>
+           <default>1</default> <!-- STARTUP_ACTION_NONE -->
+           <constraints>
+             <options>
+@@ -3538,7 +3538,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="lookandfeel.startupwindow" type="integer" label="512" help="36109">
+-          <level>0</level>
++          <level>2</level>
+           <default>10000</default> <!-- WINDOW_HOME -->
+           <constraints>
+             <options>startupwindows</options>
