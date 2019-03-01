@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (C) 2017-2018 Team LibreELEC (https://libreelec.tv)
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
@@ -17,9 +17,8 @@ for PKG_SUBDEVICE in $SUBDEVICES; do
   PKG_DEPENDS_TARGET+=" u-boot-${PKG_SUBDEVICE}"
 done
 
-PKG_CANUPDATE="${DEVICE}*"
+PKG_CANUPDATE="${PROJECT}*"
 PKG_NEED_UNPACK="$PROJECT_DIR/$PROJECT/bootloader"
-[ -n "$SUBDEVICE" ] && PKG_NEED_UNPACK+=" $PROJECT_DIR/$PROJECT/devices/$DEVICE/bootloader"
 
 make_target() {
     : # nothing

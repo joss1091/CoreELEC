@@ -1,10 +1,11 @@
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (C) 2009-2016 Stephan Raue (stephan@openelec.tv)
 # Copyright (C) 2017-present Team LibreELEC (https://libreelec.tv)
+# Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="bcm2835-driver"
-PKG_VERSION="1ea87818b323d08e7bc8e74f930952f36f2f61f4"
-PKG_SHA256="8f6629e264a4f4a6d9ee9cbc1ae987db1b42dd1744a476cb83fa10be6fce9104"
+PKG_VERSION="81cca1a9380c828299e884dba5efd0d4acb39e8d"
+PKG_SHA256="1db684b2be246b755a086603caad99c7ac9721da5ac390099e681e07b7b84931"
 PKG_LICENSE="nonfree"
 PKG_SITE="http://www.broadcom.com"
 PKG_URL="$DISTRO_SRC/$PKG_NAME-$PKG_VERSION.tar.xz"
@@ -31,9 +32,6 @@ make_target() {
 }
 
 makeinstall_target() {
-  mkdir -p $INSTALL/usr/sbin
-    cp -PRv $FLOAT/opt/vc/sbin/vcfiled $INSTALL/usr/sbin
-
   mkdir -p $INSTALL/usr/lib
     cp -PRv $FLOAT/opt/vc/lib/*.so $INSTALL/usr/lib
     ln -sf /usr/lib/libbrcmEGL.so $INSTALL/usr/lib/libEGL.so
@@ -41,7 +39,7 @@ makeinstall_target() {
     ln -sf /usr/lib/libbrcmGLESv2.so $INSTALL/usr/lib/libGLESv2.so
     ln -sf /usr/lib/libbrcmGLESv2.so $INSTALL/usr/lib/libGLESv2.so.2
 
-# some usefull debug tools
+# some useful debug tools
   mkdir -p $INSTALL/usr/bin
     cp -PRv $FLOAT/opt/vc/bin/dtoverlay $INSTALL/usr/bin
     ln -s dtoverlay $INSTALL/usr/bin/dtparam

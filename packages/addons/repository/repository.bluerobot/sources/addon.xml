@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.bluerobot"
+		name="Bluerobot Add-ons"
+		version="@PKG_VERSION"
+		provider-name="Bluerobot Team">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+		<extension point="xbmc.addon.repository" name="bluerobot">
+			<info compressed="true">https://raw.githubusercontent.com/joss1091/repository.bluerobot/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/joss1091/repository.bluerobot/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/joss1091/repository.bluerobot/master/</datadir>
+		</extension>
+    <extension point="xbmc.addon.metadata">
+			<summary lang="en">Official Repository of Bluerobot</summary>
+			<summary lang="de">Offizielles Repository der Kodinerds</summary>
+			<description lang="en">This is the official Repository of Bluerobot</description>
+			<description lang="de"></description>
+			<disclaimer></disclaimer>
+			<platform>all</platform>
+    </extension>
+</addon>

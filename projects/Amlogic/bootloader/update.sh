@@ -1,7 +1,8 @@
 #!/bin/sh
 
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Copyright (C) 2017-present Team LibreELEC (https://libreelec.tv)
+# Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 [ -z "$SYSTEM_ROOT" ] && SYSTEM_ROOT=""
 [ -z "$BOOT_ROOT" ] && BOOT_ROOT="/flash"
@@ -47,6 +48,7 @@ for arg in $(cat /proc/cmdline); do
             ;;
           *odroidc2)
 	    SUBDEVICE="Odroid_C2"
+	    LE_DT_ID="gxbb_p200_2g_odroid_c2"
             ;;
           *kvim2)
 	    SUBDEVICE="KVIM2"
@@ -167,3 +169,6 @@ if [ ! -f $BOOT_ROOT/dtb.img -a -f $BOOT_ROOT/@LEGACY_DTB_NAME@ ]; then
 fi
 
 mount -o ro,remount $BOOT_ROOT
+
+echo "Executing remote-toggle..."
+$SYSTEM_ROOT/usr/lib/coreelec/remote-toggle
