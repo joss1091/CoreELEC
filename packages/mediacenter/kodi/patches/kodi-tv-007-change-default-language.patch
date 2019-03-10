@@ -1,0 +1,12 @@
+diff -Naur kodi-18.0-Leia.orig/system/settings/settings.xml kodi-18.0-Leia/system/settings/settings.xml
+--- kodi-18.0-Leia.orig/system/settings/settings.xml	2019-03-05 23:15:49.148487280 +0000
++++ kodi-18.0-Leia/system/settings/settings.xml	2019-03-05 23:16:46.509153280 +0000
+@@ -3297,7 +3297,7 @@
+       <group id="1" label="14218">
+         <setting id="locale.language" type="addon" label="248" help="36114">
+           <level>0</level>
+-          <default>resource.language.en_gb</default>
++          <default>resource.language.es_mx</default>
+           <constraints>
+             <addontype>kodi.resource.language</addontype>
+           </constraints>

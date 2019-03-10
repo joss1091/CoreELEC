@@ -7,7 +7,7 @@ PKG_VERSION=""
 PKG_LICENSE="GPL"
 PKG_SITE="https://libreelec.tv"
 PKG_URL=""
-PKG_DEPENDS_TARGET="toolchain $MEDIACENTER"
+PKG_DEPENDS_TARGET="toolchain $MEDIACENTER pvr.livestreamclient module.inputstreamhelper inputstream.adaptive inputstream.rtmp language.es_mx autocompletion"
 PKG_SECTION="virtual"
 PKG_LONGDESC="Mediacenter: Metapackage"
 
@@ -31,6 +31,8 @@ if [ "$MEDIACENTER" = "kodi" ]; then
     PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET $DISTRO_PKG_SETTINGS"
   fi
 
+#package SKINS
+#PKG_DEPENDS_TARGET="grab.fanart skin.helper.service module.simplejson module.simplecache module.metadatautils"
 # other packages
   PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET xmlstarlet"
 

@@ -7,7 +7,7 @@ diff -Naur kodi-18.0rc4-Leia.orig/system/settings/settings.xml kodi-18.0rc4-Leia
          <setting id="lookandfeel.startupaction" type="integer" label="39100" help="36161">
 -          <level>0</level>
 +          <level>2</level>
-           <default>1</default> <!-- STARTUP_ACTION_NONE -->
+           <default>0</default> <!-- STARTUP_ACTION_NONE -->
            <constraints>
              <options>
 @@ -3538,7 +3538,7 @@

@@ -11,13 +11,13 @@ PKG_DEPENDS_TARGET="toolchain Python3 $ADDITIONAL_PACKAGES"
 PKG_SECTION="virtual"
 PKG_LONGDESC="misc-packages: Metapackage for miscellaneous packages"
 
-#post_install() {
+post_install() {
 
-			#mkdir -p $INSTALL/usr/lib/libreelec
-			#cp -PR $PKG_DIR/scripts/* $INSTALL/usr/lib/libreelec
+			mkdir -p $INSTALL/usr/lib/coreelec
+			cp -PR $PKG_DIR/scripts/* $INSTALL/usr/lib/coreelec
 
-			# enable_service storage-addons-copy.service
+			enable_service storage-addons-copy.service
 
-			# ADDON_MANIFEST=$INSTALL/usr/share/kodi/system/addon-manifest.xml
-		  # xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.ghost" $ADDON_MANIFEST
-#	}
+			#ADDON_MANIFEST=$INSTALL/usr/share/kodi/system/addon-manifest.xml
+		  #xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.ghost" $ADDON_MANIFEST
+	}

@@ -32,7 +32,7 @@
 # Skins to install (Estuary)
 # Space separated list is supported,
 # e.g. SKINS="Estuary"
-  SKINS="Estuary"
+  SKINS="Estuary Ghost"
 
 # Default Skin (Estuary)
   SKIN_DEFAULT="Estuary"
@@ -229,7 +229,7 @@
   DISTRO_DISKLABEL="STORAGE"
 
 # Settings package name - blank if not required
-  DISTRO_PKG_SETTINGS="CoreELEC-settings"
+  DISTRO_PKG_SETTINGS="BlueELEC-settings"
 
 # IR remote protocols supported in default config
   IR_REMOTE_PROTOCOLS="RC6 NEC"

@@ -1,0 +1,12 @@
+diff -Naur kodi-18.0-Leia.orig/system/settings/settings.xml kodi-18.0-Leia/system/settings/settings.xml
+--- kodi-18.0-Leia.orig/system/settings/settings.xml	2019-03-05 18:08:14.498671768 +0000
++++ kodi-18.0-Leia/system/settings/settings.xml	2019-03-05 18:08:53.282053768 +0000
+@@ -3197,7 +3197,7 @@
+       <group id="1" label="24997">
+         <setting id="lookandfeel.skin" type="addon" label="166" help="36103">
+           <level>2</level>
+-          <default>skin.estuary</default>
++          <default>skin.ghost</default>
+           <constraints>
+             <addontype>xbmc.gui.skin</addontype>
+           </constraints>

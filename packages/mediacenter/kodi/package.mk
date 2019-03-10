@@ -326,7 +326,37 @@ post_makeinstall_target() {
   xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "os.libreelec.tv" $ADDON_MANIFEST
   xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "os.openelec.tv" $ADDON_MANIFEST
   xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "$ADDON_REPO_ID" $ADDON_MANIFEST
-  xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.coreelec.settings" $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.coreelec.settings" $ADDON_MANIFEST
+  xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "pvr.livestreamclient" -i '/addons/addon[last()]' -t attr -n optional -v true  $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.arrow" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "resource.uisounds.grid" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.grab.fanart" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.beautifulsoup" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.certifi" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.chardet" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.dateutil" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.idna" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.metadatautils" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.musicbrainz" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.requests" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.simplecache" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.simplejson" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.six" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.thetvdb" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.unidecode" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.urllib3" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.skin.helper.backgrounds" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.skin.helper.service" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.skin.helper.widgets" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.shortcuts" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.watchlist" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "inputstream.rtmp" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "module.inputstreamhelper" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "module.addon.signals" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "inputstream.adaptive" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "resource.language.es_mx" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "plugin.video.netflix" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.ghost" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
 
   if [ "$DRIVER_ADDONS_SUPPORT" = "yes" ]; then
     xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.program.driverselect" $ADDON_MANIFEST
