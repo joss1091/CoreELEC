@@ -326,7 +326,7 @@ post_makeinstall_target() {
   xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "os.libreelec.tv" $ADDON_MANIFEST
   xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "os.openelec.tv" $ADDON_MANIFEST
   xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "$ADDON_REPO_ID" $ADDON_MANIFEST
-	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.coreelec.settings" $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.blueelec.settings" $ADDON_MANIFEST
   xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "pvr.livestreamclient" -i '/addons/addon[last()]' -t attr -n optional -v true  $ADDON_MANIFEST
 	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.module.arrow" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
 	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "resource.uisounds.grid" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
