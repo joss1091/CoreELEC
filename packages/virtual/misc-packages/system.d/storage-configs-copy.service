@@ -1,0 +1,12 @@
+[Unit]
+Description=Kodi storage configs copy script
+Before=kodi.service
+
+[Service]
+Type=oneshot
+Environment=HOME=/storage
+ExecStart=-/bin/sh -c "exec sh /usr/lib/coreelec/storage-configs-copy"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=kodi.service

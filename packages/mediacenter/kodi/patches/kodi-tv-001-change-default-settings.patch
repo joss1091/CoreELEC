@@ -1,0 +1,39 @@
+diff -Naur kodi-18.0-Leia.orig/system/settings/settings.xml kodi-18.0-Leia/system/settings/settings.xml
+--- kodi-18.0-Leia.orig/system/settings/settings.xml	2019-03-21 15:38:51.096974000 +0000
++++ kodi-18.0-Leia/system/settings/settings.xml	2019-03-21 15:50:11.661086000 +0000
+@@ -1252,7 +1252,7 @@
+           <dependencies>
+             <dependency type="visible" on="property" name="pvrsettingvisible" setting="pvrmanager.usebackendchannelnumbers" operator="is">true</dependency>
+           </dependencies>
+-          <default>false</default>
++          <default>true</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="pvrmanager.clientpriorities" type="action" label="19240" help="36210">
+@@ -1324,7 +1324,7 @@
+       <group id="1" label="128">
+         <setting id="epg.pastdaystodisplay" type="integer" label="19229" help="36219">
+           <level>2</level>
+-          <default>1</default>
++          <default>0</default>
+           <constraints>
+             <minimum>0</minimum>
+             <step>1</step>
+@@ -3197,7 +3197,7 @@
+       <group id="1" label="24997">
+         <setting id="lookandfeel.skin" type="addon" label="166" help="36103">
+           <level>0</level>
+-          <default>skin.estuary</default>
++          <default>skin.ghost</default>
+           <constraints>
+             <addontype>xbmc.gui.skin</addontype>
+           </constraints>
+@@ -3297,7 +3297,7 @@
+       <group id="1" label="14218">
+         <setting id="locale.language" type="addon" label="248" help="36114">
+           <level>0</level>
+-          <default>resource.language.en_gb</default>
++          <default>resource.language.es_mx</default>
+           <constraints>
+             <addontype>kodi.resource.language</addontype>
+           </constraints>

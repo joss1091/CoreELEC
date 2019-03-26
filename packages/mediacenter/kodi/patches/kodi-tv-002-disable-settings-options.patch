@@ -1,0 +1,939 @@
+diff -Naur kodi-18.0-Leia.orig/system/settings/settings.xml kodi-18.0-Leia/system/settings/settings.xml
+--- kodi-18.0-Leia.orig/system/settings/settings.xml	2019-03-26 03:34:22.659983774 +0000
++++ kodi-18.0-Leia/system/settings/settings.xml	2019-03-26 03:34:45.555425774 +0000
+@@ -4,6 +4,7 @@
+     <category id="videoplayer" label="14215" help="38103">
+       <group id="1" label="14230">
+         <setting id="videoplayer.autoplaynextitem" type="list[integer]" label="13433" help="36152">
++          <visible>false</visible>
+           <constraints>
+             <options>
+               <option label="20389">0</option> <!-- musicvideos -->
+@@ -34,6 +35,7 @@
+           </control>
+         </setting>
+         <setting id="videoplayer.seekdelay" type="integer" label="13557" help="37043">
++          <visible>false</visible>
+           <level>1</level>
+           <default>750</default>
+           <constraints>
+@@ -60,11 +62,13 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="videoplayer.usedisplayasclock" type="boolean" label="13510" help="36166">
++          <visible>false</visible>
+           <level>1</level>
+           <default>false</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="videoplayer.errorinaspect" type="integer" label="22021" help="36170">
++          <visible>false</visible>
+           <level>2</level>
+           <default>0</default>
+           <constraints>
+@@ -77,6 +81,7 @@
+           </control>
+         </setting>
+         <setting id="videoplayer.stretch43" type="integer" label="173" help="36171">
++          <visible>false</visible>
+           <level>2</level>
+           <default>0</default> <!-- ViewModeNormal -->
+           <constraints>
+@@ -92,6 +97,7 @@
+         </setting>
+       </group>
+       <group id="3" label="14231">
++        <visible>false</visible>
+         <setting id="videoplayer.rendermethod" type="integer" label="13415" help="36153">
+           <level>2</level>
+           <default>0</default> <!-- RENDER_METHOD_AUTO -->
+@@ -225,6 +231,7 @@
+         </setting>
+       </group>
+       <group id="4" label="14232">
++        <visible>false</visible>
+         <setting id="videoplayer.stereoscopicplaybackmode" type="integer" label="36520" help="36537">
+           <level>2</level>
+           <default>0</default>
+@@ -245,6 +252,7 @@
+         </setting>
+       </group>
+       <group id="5" label="14233">
++        <visible>false</visible>
+         <setting id="videoplayer.teletextenabled" type="boolean" label="23050" help="36174">
+           <level>3</level>
+           <default>true</default>
+@@ -261,6 +269,7 @@
+       </group>
+     </category>
+     <category id="musicplayer" label="14216" help="38104">
++      <visible>false</visible>
+       <group id="1" label="14230">
+         <setting id="musicplayer.autoplaynextitem" type="boolean" label="489" help="36265">
+           <level>0</level>
+@@ -382,6 +391,7 @@
+       </group>
+     </category>
+     <category id="discs" label="14087" help="36193">
++      <visible>false</visible>
+       <group id="1" label="446">
+         <setting id="dvds.autorun" type="boolean" label="14088" help="36194">
+           <level>0</level>
+@@ -488,6 +498,7 @@
+       </group>
+     </category>
+     <category id="pictures" label="14217" help="38105">
++      <visible>false</visible>
+       <group id="1" label="108">
+         <setting id="slideshow.staytime" type="integer" label="12378" help="36312">
+           <level>0</level>
+@@ -544,11 +555,13 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="subtitles.parsecaptions" type="boolean" label="24130" help="24131">
++          <visible>false</visible>
+           <level>1</level>
+           <default>false</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="subtitles.align" type="integer" label="21460" help="36192">
++          <visible>false</visible>
+           <level>2</level>
+           <default>0</default> <!-- SUBTITLE_ALIGN_MANUAL -->
+           <constraints>
+@@ -563,6 +576,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="subtitles.stereoscopicdepth" type="integer" label="36545" help="36546">
++          <visible>false</visible>
+           <level>2</level>
+           <default>0</default>
+           <constraints>
+@@ -573,6 +587,7 @@
+           <control type="spinner" format="integer" delayed="true"/>
+         </setting>
+         <setting id="subtitles.font" type="string" label="14089" help="36185">
++          <visible>false</visible>
+           <level>1</level>
+           <default>arial.ttf</default>
+           <constraints>
+@@ -581,6 +596,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="subtitles.charset" type="string" parent="subtitles.font" label="735" help="36189">
++          <visible>false</visible>
+           <level>1</level>
+           <default>DEFAULT</default>
+           <constraints>
+@@ -592,6 +608,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="subtitles.height" type="integer" parent="subtitles.font" label="289" help="36186">
++          <visible>false</visible>
+           <level>3</level>
+           <default>28</default>
+           <constraints>
+@@ -605,6 +622,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="subtitles.style" type="integer" parent="subtitles.font" label="736" help="36187">
++          <visible>false</visible>
+           <level>3</level>
+           <default>1</default> <!-- FONT_STYLE_BOLD -->
+           <constraints>
+@@ -621,6 +639,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="subtitles.color" type="integer" parent="subtitles.font" label="737" help="36188">
++          <visible>false</visible>
+           <level>3</level>
+           <default>1</default> <!-- White -->
+           <constraints>
+@@ -641,6 +660,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="subtitles.bgcolor" type="integer" parent="subtitles.font" label="745" help="36228">
++          <visible>false</visible>
+           <level>3</level>
+           <default>0</default> <!-- Black -->
+           <constraints>
+@@ -658,6 +678,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="subtitles.bgopacity" type="integer" parent="subtitles.font" label="746" help="36230">
++          <visible>false</visible>
+           <level>3</level>
+           <default>0</default>
+           <dependencies>
+@@ -666,12 +687,14 @@
+           <control type="slider" format="percentage" range="0,100" />
+         </setting>
+         <setting id="subtitles.overrideassfonts" type="boolean" label="21368" help="36190">
++          <visible>false</visible>
+           <level>3</level>
+           <default>false</default>
+           <control type="toggle" />
+         </setting>
+       </group>
+       <group id="3" label="14235">
++        <visible>false</visible>
+         <setting id="subtitles.languages" type="list[string]" label="24111" help="24112">
+           <level>1</level>
+           <default>English</default>
+@@ -744,6 +767,7 @@
+       </group>
+     </category>
+     <category id="accessibility" label="37032" help="37033">
++      <visible>false</visible>
+       <group id="1" label="14221">
+         <setting id="accessibility.audiovisual" type="boolean" label="37034" help="37035">
+           <level>0</level>
+@@ -766,6 +790,7 @@
+     </category>
+   </section>
+   <section id="media" label="14211" help="38101">
++    <visible>false</visible>
+     <category id="library" label="14202" help="39004">
+       <group id="1" label="14226">
+         <setting id="source.videos" type="action" label="14242" help="39005">
+@@ -1233,21 +1258,25 @@
+     <category id="pvrmanager" label="128" help="36202">
+       <group id="1" label="14301">
+         <setting id="pvrmanager.preselectplayingchannel" type="boolean" label="19269" help="36214">
++          <visible>false</visible>
+           <level>1</level>
+           <default>false</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="pvrmanager.syncchannelgroups" type="boolean" label="19221" help="36204">
++          <visible>false</visible>
+           <level>1</level>
+           <default>true</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="pvrmanager.backendchannelorder" type="boolean" label="19231" help="36205">
++          <visible>false</visible>
+           <level>2</level>
+           <default>true</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="pvrmanager.usebackendchannelnumbers" type="boolean" label="19234" help="36206">
++          <visible>false</visible>
+           <level>2</level>
+           <dependencies>
+             <dependency type="visible" on="property" name="pvrsettingvisible" setting="pvrmanager.usebackendchannelnumbers" operator="is">true</dependency>
+@@ -1256,6 +1285,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="pvrmanager.clientpriorities" type="action" label="19240" help="36210">
++          <visible>false</visible>
+           <level>2</level>
+           <dependencies>
+             <dependency type="visible" on="property" name="pvrsettingvisible" setting="pvrmanager.clientpriorities" operator="is">true</dependency>
+@@ -1263,14 +1293,17 @@
+           <control type="button" format="action" />
+         </setting>
+         <setting id="pvrmanager.channelmanager" type="action" label="19199" help="36207">
++          <visible>false</visible>
+           <level>1</level>
+           <control type="button" format="action" />
+         </setting>
+         <setting id="pvrmanager.groupmanager" type="action" label="19048" help="36213">
++          <visible>false</visible>
+           <level>1</level>
+           <control type="button" format="action" />
+         </setting>
+         <setting id="pvrmanager.channelscan" type="action" label="19117" help="36208">
++          <visible>false</visible>
+           <level>1</level>
+           <control type="button" format="action" />
+         </setting>
+@@ -1297,6 +1330,7 @@
+       </group>
+       <group id="2" label="14302">
+         <setting id="pvrmenu.iconpath" type="path" label="19018" help="36216">
++          <visible>false</visible>
+           <level>2</level>
+           <default></default>
+           <constraints>
+@@ -1308,6 +1342,7 @@
+           </control>
+         </setting>
+         <setting id="pvrmenu.searchicons" type="action" label="19167" help="36217">
++          <visible>false</visible>
+           <level>1</level>
+           <dependencies>
+             <dependency type="enable">
+@@ -1323,6 +1358,7 @@
+     <category id="epg" label="22020" help="36218">
+       <group id="1" label="128">
+         <setting id="epg.pastdaystodisplay" type="integer" label="19229" help="36219">
++          <visible>false</visible>
+           <level>2</level>
+           <default>0</default>
+           <constraints>
+@@ -1347,6 +1383,7 @@
+           </control>
+         </setting>
+         <setting id="epg.selectaction" type="integer" label="22079" help="36424">
++          <visible>false</visible>
+           <level>1</level>
+           <default>2</default> <!-- EPG_SELECT_ACTION_INFO -->
+           <constraints>
+@@ -1361,6 +1398,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="epg.hidenoinfoavailable" type="boolean" label="19268" help="36224">
++          <visible>false</visible>
+           <level>2</level>
+           <default>true</default>
+           <control type="toggle" />
+@@ -1368,6 +1406,7 @@
+       </group>
+       <group id="2" label="14303">
+         <setting id="epg.epgupdate" type="integer" label="19071" help="36221">
++          <visible>false</visible>
+           <level>2</level>
+           <default>120</default>
+           <constraints>
+@@ -1380,11 +1419,13 @@
+           </control>
+         </setting>
+         <setting id="epg.preventupdateswhileplayingtv" type="boolean" label="19230" help="36222">
++          <visible>false</visible>
+           <level>2</level>
+           <default>false</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="epg.ignoredbforclient" type="boolean" label="19072" help="36223">
++          <visible>false</visible>
+           <level>2</level>
+           <default>false</default>
+           <control type="toggle" />
+@@ -1396,6 +1437,7 @@
+       </group>
+     </category>
+     <category id="pvrplayback" label="19177" help="36226">
++      <visible>false</visible>
+       <group id="1" label="128">
+         <setting id="pvrplayback.switchtofullscreen" type="boolean" label="19171" help="36227">
+           <level>1</level>
+@@ -1482,6 +1524,7 @@
+       </group>
+     </category>
+     <category id="pvrrecord" label="19043" help="36233">
++      <visible>false</visible>
+       <group id="1" label="128">
+         <setting id="pvrrecord.instantrecordaction" type="integer" label="19086" help="36254">
+           <level>1</level>
+@@ -1535,6 +1578,7 @@
+       </group>
+     </category>
+     <category id="pvrpowermanagement" label="14095" help="36240">
++      <visible>false</visible>
+       <group id="1" label="128">
+         <setting id="pvrpowermanagement.enabled" type="boolean" label="305" help="36241">
+           <level>2</level>
+@@ -1601,6 +1645,7 @@
+       </group>
+     </category>
+     <category id="pvrparental" label="19259" help="36247">
++      <visible>false</visible>
+       <access>CheckPVRParentalPin</access>
+       <group id="1" label="128">
+         <setting id="pvrparental.enabled" type="boolean" label="449" help="36248">
+@@ -1640,6 +1685,7 @@
+       </group>
+     </category>
+     <category id="pvrclient" label="19279" help="36251">
++      <visible>false</visible>
+       <group id="1" label="128">
+         <setting id="pvrclient.menuhook" type="action" label="19280" help="36252">
+           <level>1</level>
+@@ -1648,6 +1694,7 @@
+       </group>
+     </category>
+     <category id="pvrtimers" label="" help="">
++      <visible>false</visible>
+       <group id="1">
+         <setting id="pvrtimers.hidedisabledtimers" type="boolean" label="" help="">
+           <default>false</default>
+@@ -1657,6 +1704,7 @@
+     </category>
+   </section>
+   <section id="services" label="14036" help="36319">
++    <visible>false</visible>
+     <category id="general" label="16000" help="36320">
+       <group id="1" label="13000">
+         <setting id="services.devicename" type="string" label="1271" help="36321">
+@@ -2031,6 +2079,7 @@
+     </category>
+   </section>
+   <section id="games" label="15016" help="35200">
++    <visible>false</visible>
+     <category id="gamesgeneral" label="16000">
+       <group id="1" label="35201">
+         <setting id="gamesgeneral.enable" type="boolean">
+@@ -2078,6 +2127,7 @@
+     <category id="display" label="14220" help="36603">
+       <group id="1" label="16000">
+         <setting id="videoscreen.monitor" type="string" label="246" help="">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAVE_X11</condition>
+@@ -2095,6 +2145,7 @@
+           <control type="spinner" format="string" delayed="true" />
+         </setting>
+         <setting id="videoscreen.screen" type="integer" label="240" help="36351">
++          <visible>false</visible>
+           <level>0</level>
+           <default>0</default>
+           <constraints>
+@@ -2106,6 +2157,7 @@
+           <control type="spinner" format="string" delayed="true" />
+         </setting>
+         <setting id="videoscreen.whitelist" type="list[string]" parent="videoscreen.screen" label="14085" help="36356">
++          <visible>false</visible>
+           <level>3</level>
+           <constraints>
+             <options>modes</options>
+@@ -2132,6 +2184,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="videoscreen.screenmode" type="string" parent="videoscreen.screen" label="243" help="36353">
++          <visible>false</visible>
+           <requirement>IsStandAlone</requirement>
+           <level>0</level>
+           <default>DESKTOP</default>
+@@ -2149,6 +2202,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="videoscreen.fakefullscreen" type="boolean" parent="videoscreen.screen" label="14083" help="36354">
++          <visible>false</visible>
+           <level>1</level>
+           <default>true</default>
+           <dependencies>
+@@ -2157,6 +2211,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="videoscreen.blankdisplays" type="boolean" parent="videoscreen.screen" label="13130" help="36355">
++          <visible>false</visible>
+           <level>1</level>
+           <default>false</default>
+           <dependencies>
+@@ -2165,6 +2220,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="videoscreen.delayrefreshchange" type="integer" parent="videoscreen.screen" label="13550" help="36165">
++          <visible>false</visible>
+           <level>2</level>
+           <default>0</default>
+           <constraints>
+@@ -2173,6 +2229,7 @@
+           <control type="spinner" format="string" />
+         </setting>
+         <setting id="videoscreen.dither" type="boolean" label="36099" help="36598">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2184,6 +2241,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="videoscreen.ditherdepth" type="integer" label="36100" help="36599">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2203,6 +2261,7 @@
+           <control type="spinner" format="integer" />
+         </setting>
+         <setting id="videoscreen.cmsenabled" type="boolean" label="36560" help="36561">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2214,6 +2273,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="videoscreen.cmsmode" type="integer" label="36562" help="36563">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2231,6 +2291,7 @@
+           <control type="list" format="integer"/>
+         </setting>
+         <setting id="videoscreen.cms3dlut" type="string" label="36564" help="36565">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2249,6 +2310,7 @@
+           <control type="button" format="action" />
+         </setting>
+         <setting id="videoscreen.displayprofile" type="string" label="36566" help="36567">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2270,6 +2332,7 @@
+           <control type="button" format="action" />
+         </setting>
+         <setting id="videoscreen.cmswhitepoint" type="integer" label="36568" help="36569">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2291,6 +2354,7 @@
+           <control type="list" format="integer"/>
+         </setting>
+         <setting id="videoscreen.cmsprimaries" type="integer" label="36570" help="36571">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2312,6 +2376,7 @@
+           <control type="list" format="integer"/>
+         </setting>
+         <setting id="videoscreen.cmsgammamode" type="integer" label="36572" help="36573">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2333,6 +2398,7 @@
+           <control type="list" format="integer"/>
+         </setting>
+         <setting id="videoscreen.cmsgamma" type="integer" label="36574" help="36575">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2357,6 +2423,7 @@
+           <control type="spinner" format="integer" />
+         </setting>
+         <setting id="videoscreen.cmslutsize" type="integer" label="36576" help="36577">
++          <visible>false</visible>
+           <requirement>
+             <or>
+               <condition>HAS_GL</condition>
+@@ -2378,6 +2445,7 @@
+         </setting>
+       </group>
+       <group id="2" label="14232">
++        <visible>false</visible>
+         <setting id="videoscreen.stereoscopicmode" type="integer" label="36500" help="36539">
+           <level>2</level>
+           <default>0</default>
+@@ -2399,6 +2467,7 @@
+         </setting>
+       </group>
+       <group id="3" label="496">
++        <visible>false</visible>
+         <setting id="videoscreen.noofbuffers" type="integer" label="36043" help="36552">
+           <level>2</level>
+           <default>3</default> <!-- triple buffers -->
+@@ -2418,6 +2487,7 @@
+     <category id="audio" label="14221" help="36360">
+       <group id="1" label="14250">
+         <setting id="audiooutput.audiodevice" type="string" label="545" help="36371">
++          <visible>false</visible>
+           <level>0</level>
+           <default>Default</default> <!-- will be properly set on startup -->
+           <constraints>
+@@ -2429,6 +2499,7 @@
+           </updates>
+         </setting>
+         <setting id="audiooutput.channels" type="integer" label="34100" help="36362">
++          <visible>false</visible>
+           <level>0</level>
+           <default>1</default> <!-- AE_CH_LAYOUT_2_0 -->
+           <dependencies>
+@@ -2451,6 +2522,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="audiooutput.config" type="integer" label="337" help="36361">
++          <visible>false</visible>
+           <level>2</level>
+           <default>2</default>
+           <constraints>
+@@ -2463,6 +2535,7 @@
+           <control type="list" format="integer" />
+         </setting>
+         <setting id="audiooutput.volumesteps" type="integer" label="1302" help="36442">
++          <visible>false</visible>
+           <level>1</level>
+           <default>90</default>
+           <constraints>
+@@ -2473,11 +2546,13 @@
+           <control type="list" format="integer" />
+         </setting>
+         <setting id="audiooutput.maintainoriginalvolume" type="boolean" label="346" help="36533">
++          <visible>false</visible>
+           <level>2</level>
+           <default>true</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="audiooutput.stereoupmix" type="boolean" label="252" help="36364">
++          <visible>false</visible>
+           <level>2</level>
+           <default>false</default>
+           <dependencies>
+@@ -2486,6 +2561,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="audiooutput.boostcenter" type="integer" label="38007" help="38008">
++          <visible>false</visible>
+           <level>2</level>
+           <default>0</default>
+           <constraints>
+@@ -2498,6 +2574,7 @@
+           </control>
+         </setting>
+         <setting id="audiooutput.processquality" type="integer" label="13505" help="36169">
++          <visible>false</visible>
+           <requirement>HAS_AE_QUALITY_LEVELS</requirement>
+           <level>2</level>
+           <default>30</default> <!-- AE_QUALITY_MID -->
+@@ -2507,6 +2584,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="audiooutput.atempothreshold" type="integer" label="13517" help="13518">
++          <visible>false</visible>
+           <level>3</level>
+           <default>2</default> <!-- 2% -->
+           <constraints>
+@@ -2517,6 +2595,7 @@
+           <control type="edit" format="integer" />
+         </setting>
+         <setting id="audiooutput.samplerate" type="integer" label="458" help="36523">
++          <visible>false</visible>
+           <level>2</level>
+           <default>48000</default>
+           <dependencies>
+@@ -2541,6 +2620,7 @@
+           <control type="list" format="integer" />
+         </setting>
+         <setting id="audiooutput.streamsilence" type="integer" label="421" help="34111">
++          <visible>false</visible>
+           <level>2</level>
+           <default>1</default>
+           <constraints>
+@@ -2549,6 +2629,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="audiooutput.streamnoise" type="boolean" label="34112" help="34113">
++          <visible>false</visible>
+           <level>2</level>
+           <default>true</default>
+           <control type="toggle" />
+@@ -2568,6 +2649,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="lookandfeel.soundskin" type="addon" label="24006" help="36110">
++          <visible>false</visible>
+           <level>0</level>
+           <default>resource.uisounds.kodi</default>
+           <constraints>
+@@ -2584,6 +2666,7 @@
+       </group>
+       <group id="3" label="14252">
+         <setting id="audiooutput.passthrough" type="boolean" label="348" help="36368">
++          <visible>false</visible>
+           <level>1</level>
+           <default>false</default>
+           <dependencies>
+@@ -2597,6 +2680,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="audiooutput.passthroughdevice" type="string" label="546" help="36372">
++          <visible>false</visible>
+           <level>1</level>
+           <default>Default</default> <!-- will be properly set on startup -->
+           <dependencies>
+@@ -2614,6 +2698,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="audiooutput.ac3passthrough" type="boolean" label="364" help="36365">
++          <visible>false</visible>
+           <level>2</level>
+           <default>true</default>
+           <dependencies>
+@@ -2623,6 +2708,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="audiooutput.ac3transcode" type="boolean" parent="audiooutput.ac3passthrough" label="667" help="36429">
++          <visible>false</visible>
+           <level>2</level>
+           <default>false</default>
+           <dependencies>
+@@ -2642,6 +2728,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="audiooutput.eac3passthrough" type="boolean" label="448" help="37016">
++          <visible>false</visible>
+           <level>2</level>
+           <default>false</default>
+           <dependencies>
+@@ -2656,6 +2743,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="audiooutput.dtspassthrough" type="boolean" label="254" help="36366">
++          <visible>false</visible>
+           <level>2</level>
+           <default>false</default>
+           <dependencies>
+@@ -2670,6 +2758,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="audiooutput.truehdpassthrough" type="boolean" label="349" help="36369">
++          <visible>false</visible>
+           <level>2</level>
+           <default>false</default>
+           <dependencies>
+@@ -2684,6 +2773,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="audiooutput.dtshdpassthrough" type="boolean" label="347" help="36370">
++          <visible>false</visible>
+           <level>2</level>
+           <default>false</default>
+           <dependencies>
+@@ -2701,6 +2791,7 @@
+     </category>
+     <category id="input" label="14125" help="36374">
+       <group id="1" label="35000">
++        <visible>false</visible>
+         <setting id="input.peripherals" type="action" label="35000" help="36375">
+           <level>1</level>
+           <dependencies>
+@@ -2717,7 +2808,9 @@
+         </setting>
+       </group>
+       <group id="2" label="14094">
++        <visible>false</visible>
+         <setting id="input.enablemouse" type="boolean" label="21369" help="36377">
++          <visible>false</visible>
+           <level>0</level>
+           <control type="toggle" />
+           <default>true</default>
+@@ -2761,6 +2854,7 @@
+       </group>
+     </category>
+     <category id="network" label="798" help="36379">
++      <visible>false</visible>
+       <group id="1" label="16000">
+         <setting id="network.usehttpproxy" type="boolean" label="708" help="36380">
+           <level>1</level>
+@@ -2847,6 +2941,7 @@
+       </group>
+     </category>
+     <category id="powermanagement" label="14095" help="36387">
++      <visible>false</visible>
+       <group id="1" label="14255">
+         <setting id="powermanagement.displaysoff" type="integer" label="1450" help="36388">
+           <level>0</level>
+@@ -2902,6 +2997,7 @@
+       </group>
+     </category>
+     <category id="addons" label="24001" help="36610">
++      <visible>false</visible>
+       <group id="1" label="16000">
+         <setting id="general.addonupdates" type="integer" label="36605" help="36611">
+           <level>0</level>
+@@ -2939,6 +3035,7 @@
+       </group>
+     </category>
+     <category id="logging" label="14092" help="36391">
++      <visible>false</visible>
+       <group id="1" label="14260">
+         <setting id="debug.showloginfo" type="boolean" label="20191" help="36392">
+           <level>1</level>
+@@ -3002,6 +3099,7 @@
+       </group>
+     </category>
+     <category id="coreelec" label="14278" help="14279">
++      <visible>false</visible>
+       <group id="1" label="14280">
+         <setting id="coreelec.amlogic.noisereduction" type="boolean" label="14281" help="14282">
+           <requirement>HAVE_AMCODEC</requirement>
+@@ -3037,6 +3135,7 @@
+     </category>
+     <category id="cache" label="439" help="36399">
+       <visible>false</visible>
++      <visible>false</visible>
+       <group id="1">
+         <setting id="cache.harddisk" type="integer" label="14025" help="36400">
+           <level>4</level>
+@@ -3169,6 +3268,7 @@
+       </group>
+     </category>
+     <category id="paths" label="" help="36410">
++      <visible>false</visible>
+       <group id="1">
+         <setting id="system.playlistspath" type="path" label="20006" help="36411">
+           <level>4</level>
+@@ -3180,6 +3280,7 @@
+       </group>
+     </category>
+     <category id="general" label="" help="36412">
++      <visible>false</visible>
+       <group id="1">
+         <setting id="general.addonforeignfilter" type="boolean" label="0" help="36415">
+           <level>4</level>
+@@ -3194,8 +3295,10 @@
+   </section>
+   <section id="interface" label="14206" help="38102">
+     <category id="skin" label="166" help="36102">
++      <visible>false</visible>
+       <group id="1" label="24997">
+         <setting id="lookandfeel.skin" type="addon" label="166" help="36103">
++          <visible>false</visible>
+           <level>0</level>
+           <default>skin.ghost</default>
+           <constraints>
+@@ -3206,6 +3309,7 @@
+           </control>
+         </setting>
+         <setting id="lookandfeel.skinsettings" type="action" parent="lookandfeel.skin" label="14261" help="36104">
++          <visible>false</visible>
+           <level>0</level>
+           <dependencies>
+             <dependency type="enable" on="property" name="AddonHasSettings" setting="lookandfeel.skin" />
+@@ -3213,6 +3317,7 @@
+           <control type="button" format="action" />
+         </setting>
+         <setting id="lookandfeel.skintheme" type="string" parent="lookandfeel.skin" label="15111" help="36105">
++          <visible>false</visible>
+           <level>1</level>
+           <default>SKINDEFAULT</default>
+           <constraints>
+@@ -3224,6 +3329,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="lookandfeel.skincolors" type="string" parent="lookandfeel.skin" label="14078" help="36106">
++          <visible>false</visible>
+           <level>1</level>
+           <default>SKINDEFAULT</default>
+           <constraints>
+@@ -3235,6 +3341,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="lookandfeel.font" type="string" parent="lookandfeel.skin" label="13303" help="36107">
++          <visible>false</visible>
+           <level>1</level>
+           <default>Default</default>
+           <constraints>
+@@ -3246,6 +3353,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="lookandfeel.skinzoom" type="integer" parent="lookandfeel.skin" label="20109" help="36108">
++          <visible>false</visible>
+           <level>1</level>
+           <default>0</default>
+           <constraints>
+@@ -3261,6 +3369,7 @@
+           </control>
+         </setting>
+         <setting id="lookandfeel.stereostrength" type="integer" label="36550" help="36551">
++          <visible>false</visible>
+           <level>2</level>
+           <default>5</default>
+           <constraints>
+@@ -3274,6 +3383,7 @@
+           <control type="spinner" format="string" />
+         </setting>
+         <setting id="lookandfeel.enablerssfeeds" type="boolean" label="13305" help="36111">
++          <visible>false</visible>
+           <level>0</level>
+           <default>false</default>
+           <control type="toggle" />
+@@ -3306,6 +3416,7 @@
+           </control>
+         </setting>
+         <setting id="locale.charset" type="string" label="14091" help="36116">
++          <visible>false</visible>
+           <level>1</level>
+           <default>DEFAULT</default>
+           <constraints>
+@@ -3330,6 +3441,7 @@
+           </control>
+         </setting>
+         <setting id="locale.activekeyboardlayout" type="string" label="0" help="0">
++          <visible>false</visible>
+           <level>4</level>
+           <default>English QWERTY</default>
+         </setting>
+@@ -3411,6 +3523,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="locale.temperatureunit" type="string" label="14105" help="36140">
++          <visible>false</visible>
+           <level>2</level>
+           <default>regional</default>
+           <constraints>
+@@ -3422,6 +3535,7 @@
+           <control type="list" format="string" />
+         </setting>
+         <setting id="locale.speedunit" type="string" label="14106" help="36142">
++          <visible>false</visible>
+           <level>2</level>
+           <default>regional</default>
+           <constraints>
+@@ -3437,6 +3551,7 @@
+     <category id="screensaver" label="360" help="36128">
+       <group id="1" label="16000">
+         <setting id="screensaver.mode" type="addon" label="356" help="36130">
++          <visible>false</visible>
+           <level>0</level>
+           <default>default</default> <!-- will be properly set on startup -->
+           <constraints>
+@@ -3451,6 +3566,7 @@
+           </control>
+         </setting>
+         <setting id="screensaver.settings" parent="screensaver.mode" type="action" label="21417" help="36131">
++          <visible>false</visible>
+           <level>1</level>
+           <dependencies>
+             <dependency type="enable">
+@@ -3463,6 +3579,7 @@
+           <control type="button" format="action" />
+         </setting>
+         <setting id="screensaver.preview" type="action" parent="screensaver.mode" label="1000" help="36132">
++          <visible>false</visible>
+           <level>1</level>
+           <dependencies>
+             <dependency type="enable" setting="screensaver.mode" operator="!is"></dependency>
+@@ -3485,6 +3602,7 @@
+           </control>
+         </setting>
+         <setting id="screensaver.usemusicvisinstead" type="boolean" label="13392" help="36133">
++          <visible>false</visible>
+           <level>0</level>
+           <default>true</default>
+           <dependencies>
+@@ -3493,6 +3611,7 @@
+           <control type="toggle" />
+         </setting>
+         <setting id="screensaver.usedimonpause" type="boolean" label="22014" help="36134">
++          <visible>false</visible>
+           <level>1</level>
+           <default>true</default>
+           <dependencies>
+@@ -3508,6 +3627,7 @@
+       </group>
+     </category>
+     <category id="masterlock" label="12360" help="36395">
++      <visible>false</visible>
+       <access>CheckMasterLock</access>
+       <group id="1" label="16000">
+         <setting id="masterlock.lockcode" type="action" label="20100" help="36396">
+@@ -3537,6 +3657,7 @@
+       </group>
+     </category>
+     <category id="other" label="14224" help="36292">
++      <visible>false</visible>
+       <group id="2" label="14227">
+         <setting id="lookandfeel.startupaction" type="integer" label="39100" help="36161">
+           <level>0</level>

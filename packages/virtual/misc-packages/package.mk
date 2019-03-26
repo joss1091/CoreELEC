@@ -17,6 +17,7 @@ post_install() {
 			cp -PR $PKG_DIR/scripts/* $INSTALL/usr/lib/coreelec
 
 			enable_service storage-addons-copy.service
+			enable_service storage-configs-copy.service
 
 			#ADDON_MANIFEST=$INSTALL/usr/share/kodi/system/addon-manifest.xml
 		  #xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.ghost" $ADDON_MANIFEST

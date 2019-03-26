@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 PKG_NAME="kodi-theme-Ghost"
-PKG_VERSION="43b2ad329a1ec017d9330961f3b249b50e865c0e"
+PKG_VERSION="9b1c79b3e1a10d7a2a51ac2f94119d274ff265c7"
 PKG_LICENSE="GPL"
 PKG_SITE="http://159.89.43.103/tvstream/skin.ghost"
 PKG_URL="http://159.89.43.103/tvstream/skin.ghost/-/archive/master/$PKG_VERSION.tar.gz"
