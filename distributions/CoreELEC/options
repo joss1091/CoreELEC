@@ -32,7 +32,7 @@
 # Skins to install (Estuary)
 # Space separated list is supported,
 # e.g. SKINS="Estuary"
-  SKINS="Estuary Ghost"
+  SKINS="Estuary Ghost BlueTelecable"
 
 # Default Skin (Estuary)
   SKIN_DEFAULT="Estuary"
@@ -202,7 +202,7 @@
   ADDON_REPO_ID="repository.coreelec"
 
 # Name of the default addon repository
-  ADDON_REPO_NAME="CoreELEC Add-ons"
+  ADDON_REPO_NAME="BlueELEC Add-ons"
 
 # Version of the default addon repository
   ADDON_REPO_VERSION="9.0.2"

@@ -1,0 +1,12 @@
+diff -Naur kodi-18.0-Leia.orig/system/settings/settings.xml kodi-18.0-Leia/system/settings/settings.xml
+--- kodi-18.0-Leia.orig/system/settings/settings.xml	2019-04-02 15:41:43.853722000 +0000
++++ kodi-18.0-Leia/system/settings/settings.xml	2019-04-02 15:42:29.712640000 +0000
+@@ -891,7 +891,7 @@
+       <group id="1" label="593">
+         <setting id="filelists.showparentdiritems" type="boolean" label="13306" help="36122">
+           <level>1</level>
+-          <default>true</default>
++          <default>false</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="filelists.ignorethewhensorting" type="boolean" label="13399" help="36124">

@@ -357,6 +357,9 @@ post_makeinstall_target() {
 	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "resource.language.es_mx" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
 	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "plugin.video.netflix" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
 	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.ghost" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.blue.telecable" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.openvfd" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+
 
   if [ "$DRIVER_ADDONS_SUPPORT" = "yes" ]; then
     xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.program.driverselect" $ADDON_MANIFEST

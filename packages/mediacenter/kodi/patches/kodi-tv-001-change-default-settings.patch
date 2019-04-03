@@ -24,7 +24,7 @@ diff -Naur kodi-18.0-Leia.orig/system/settings/settings.xml kodi-18.0-Leia/syste
          <setting id="lookandfeel.skin" type="addon" label="166" help="36103">
            <level>0</level>
 -          <default>skin.estuary</default>
-+          <default>skin.ghost</default>
++          <default>skin.blue.telecable</default>
            <constraints>
              <addontype>xbmc.gui.skin</addontype>
            </constraints>

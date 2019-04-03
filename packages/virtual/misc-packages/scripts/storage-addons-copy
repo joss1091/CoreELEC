@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ ! -d /storage/.kodi/addons/skin.ghost ]; then
-    cp -r /usr/share/kodi/storage_addons/skin.ghost /storage/.kodi/addons
+if [ ! -d /storage/.kodi/addons/skin.blue.telecable ]; then
+    cp -r /usr/share/kodi/storage_addons/skin.blue.telecable /storage/.kodi/addons
     reboot now
 fi

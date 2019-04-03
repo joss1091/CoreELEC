@@ -7,7 +7,7 @@ PKG_VERSION=""
 PKG_LICENSE="GPL"
 PKG_SITE="https://libreelec.tv"
 PKG_URL=""
-PKG_DEPENDS_TARGET="toolchain $MEDIACENTER pvr.livestreamclient module.inputstreamhelper inputstream.adaptive inputstream.rtmp language.es_mx autocompletion"
+PKG_DEPENDS_TARGET="toolchain $MEDIACENTER pvr.livestreamclient module.inputstreamhelper inputstream.adaptive inputstream.rtmp language.es_mx autocompletion openvfd vfd"
 PKG_SECTION="virtual"
 PKG_LONGDESC="Mediacenter: Metapackage"
 
