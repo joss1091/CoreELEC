@@ -786,12 +786,12 @@ diff -Naur kodi-18.0-Leia.orig/system/settings/settings.xml kodi-18.0-Leia/syste
    </section>
    <section id="interface" label="14206" help="38102">
      <category id="skin" label="166" help="36102">
-+      <visible>false</visible>
++      <visible>true</visible>
        <group id="1" label="24997">
          <setting id="lookandfeel.skin" type="addon" label="166" help="36103">
-+          <visible>false</visible>
++          <visible>true</visible>
            <level>0</level>
-           <default>skin.ghost</default>
+           <default>skin.blue.telecable</default>
            <constraints>
 @@ -3206,6 +3309,7 @@
            </control>
