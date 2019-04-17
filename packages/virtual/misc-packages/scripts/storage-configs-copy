@@ -1,5 +1,5 @@
 #!/bin/sh
 
-if [ ! -e /storage/.kodi/config/ ]; then
-    cp /usr/share/kodi/storage_config/vfd.config /storage/.config/
+if [ ! -e /storage/.kodi/config/vfd.conf ]; then
+    cp /usr/share/kodi/storage_config/vfd.conf /storage/.config/
 fi

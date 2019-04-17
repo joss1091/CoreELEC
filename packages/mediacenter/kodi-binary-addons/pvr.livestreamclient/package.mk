@@ -3,7 +3,7 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="pvr.livestreamclient"
-PKG_VERSION="88e328e49e62cd781504dfae7461ee0c4828744d"
+PKG_VERSION="7f63b47f65836458451bb9695beba7621d77f187"
 # PKG_SHA256="a6b47e0ae2b15ab8070640d1dd98a3d940a3882b6d8b6e43097086de20df5648"
 PKG_REV="2"
 PKG_ARCH="any"
