@@ -2,7 +2,7 @@
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="BlueELEC-settings"
-PKG_VERSION="3c81d27bf2d40f2eeb5a92a863808b1f6ed8398d"
+PKG_VERSION="8b7a332f9bfb6a9a892a51dca5ac3b153ea85f4d"
 #PKG_SHA256="33edd6ba4d7b52b9f3eb810311fc468689aac8c412358dc8e66c85876aecab5b"
 PKG_LICENSE="GPL"
 PKG_SITE="https://coreelec.org"
