@@ -2,11 +2,11 @@
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="BlueELEC-settings"
-PKG_VERSION="8b7a332f9bfb6a9a892a51dca5ac3b153ea85f4d"
+PKG_VERSION="770f5e128e9f44c87f691cf46a17980f3f579471"
 #PKG_SHA256="33edd6ba4d7b52b9f3eb810311fc468689aac8c412358dc8e66c85876aecab5b"
 PKG_LICENSE="GPL"
 PKG_SITE="https://coreelec.org"
-PKG_URL="http://159.89.43.103/tvstream/service.blueelec.settings/-/archive/master/$PKG_VERSION.tar.gz"
+PKG_URL="https://gitlab.com/tvstream-iptv/service.blueelec.settings/-/archive/master/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain Python2 connman pygobject dbus-python"
 PKG_LONGDESC="BlueELEC-settings: is a settings dialog for BluerobotELEC"
 

@@ -3,13 +3,13 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="pvr.livestreamclient"
-PKG_VERSION="7f63b47f65836458451bb9695beba7621d77f187"
+PKG_VERSION="cc21b9930e6fcf7b68fa7ddc5b677e2dbbeaa73c"
 # PKG_SHA256="a6b47e0ae2b15ab8070640d1dd98a3d940a3882b6d8b6e43097086de20df5648"
 PKG_REV="2"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://www.kodi.tv"
-PKG_URL="http://159.89.43.103/tvstream/livestream_client/-/archive/guidialog/$PKG_VERSION.tar.gz"
+PKG_URL="https://gitlab.com/tvstream-iptv/pvr.livestreamclient/-/archive/master/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain kodi-platform rapidxml zlib"
 PKG_SECTION=""
 PKG_SHORTDESC="pvr.livestreamclient"
