@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: GPL-2.0
 # Copyright (C) 2017-2018 Team LibreELEC (https://libreelec.tv)
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
-# copy amlogic autoscript files to part1
+# copy amlogic autoscript files to part1 for Generic img only
 if [ "${SUBDEVICE}" == "Generic" ]; then
   for f in $RELEASE_DIR/3rdparty/bootloader/*autoscript; do
     [ -e "$f" ] && mcopy "$f" ::
@@ -16,7 +16,7 @@ for dtb in $RELEASE_DIR/3rdparty/bootloader/device_trees $RELEASE_DIR/3rdparty/b
   [ -e "$dtb" ] && mcopy -s "$dtb" ::
 done
 
-if [ -n ${SUBDEVICE} ]; then
+if [ "${SUBDEVICE}" != "Generic" ]; then
   if [ -f "$RELEASE_DIR/3rdparty/bootloader/${SUBDEVICE}_dtb.img" ]; then
     mcopy $RELEASE_DIR/3rdparty/bootloader/${SUBDEVICE}_dtb.img "::/dtb.img"
   fi

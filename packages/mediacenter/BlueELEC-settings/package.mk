@@ -2,11 +2,11 @@
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="BlueELEC-settings"
-PKG_VERSION="6ceb39e7f7e9941ea3189e95e37142611fea9598"
+PKG_VERSION="bfe7e8bbc57a73f3938007904042717a5c752f7f"
 #PKG_SHA256="33edd6ba4d7b52b9f3eb810311fc468689aac8c412358dc8e66c85876aecab5b"
 PKG_LICENSE="GPL"
 PKG_SITE="https://coreelec.org"
-PKG_URL="https://gitlab.com/tvstream-iptv/service.blueelec.settings/-/archive/test/$PKG_VERSION.tar.gz"
+PKG_URL="https://gitlab.com/tvstream-iptv/service.blueelec.settings/-/archive/master/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain Python2 connman pygobject dbus-python"
 PKG_LONGDESC="BlueELEC-settings: is a settings dialog for BluerobotELEC"
 
@@ -25,10 +25,10 @@ post_makeinstall_target() {
   ADDON_INSTALL_DIR=$INSTALL/usr/share/kodi/addons/service.blueelec.settings
 
   $TOOLCHAIN/bin/python -Wi -t -B $TOOLCHAIN/lib/$PKG_PYTHON_VERSION/compileall.py $ADDON_INSTALL_DIR/resources/lib/ -f
-  rm -rf $(find $ADDON_INSTALL_DIR/resources/lib/ -name "*.py")
+  #rm -rf $(find $ADDON_INSTALL_DIR/resources/lib/ -name "*.py")
 
   $TOOLCHAIN/bin/python -Wi -t -B $TOOLCHAIN/lib/$PKG_PYTHON_VERSION/compileall.py $ADDON_INSTALL_DIR/oe.py -f
-  rm -rf $ADDON_INSTALL_DIR/oe.py
+  #rm -rf $ADDON_INSTALL_DIR/oe.py
 }
 
 post_install() {

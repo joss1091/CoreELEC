@@ -7,19 +7,19 @@ PKG_VERSION="3.3.0"
 PKG_LICENSE="GPL"
 PKG_SECTION="script"
 PKG_SITE="https://coreelec.org"
-PKG_URL="https://mirrors.kodi.tv/addons/leia/script.module.simplejson/$PKG_SECTION.$PKG_NAME-$PKG_VERSION.zip"
+PKG_URL="https://github.com/XBMC-Addons/script.module.simplejson/archive/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain Python2 "
 PKG_LONGDESC="CoreELEC-settings: is a settings dialog for CoreELEC"
 PKG_TOOLCHAIN="manual"
 
-#PKG_MAKE_OPTS_TARGET="DISTRONAME=$DISTRONAME ROOT_PASSWORD=$ROOT_PASSWORD"
+
 
 unpack() {
   mkdir -p $PKG_BUILD/addon
-  #tar --strip-components=1 -xf $SOURCES/$PKG_NAME/$PKG_NAME-$PKG_VERSION.tar.gz -C $PKG_BUILD/addon
-	unzip -qq $SOURCES/$PKG_NAME/$PKG_NAME-$PKG_VERSION.zip -d $PKG_BUILD/addon
-	cp -R $PKG_BUILD/addon/$PKG_SECTION.$PKG_NAME/* $PKG_BUILD/addon
-	rm -rf $PKG_BUILD/addon/$PKG_SECTION.$PKG_NAME
+  tar --strip-components=1 -xf $SOURCES/$PKG_NAME/$PKG_NAME-$PKG_VERSION.tar.gz -C $PKG_BUILD/addon
+	# unzip -qq $SOURCES/$PKG_NAME/$PKG_NAME-$PKG_VERSION.zip -d $PKG_BUILD/addon
+	# cp -R $PKG_BUILD/addon/$PKG_SECTION.$PKG_NAME/* $PKG_BUILD/addon
+	# rm -rf $PKG_BUILD/addon/$PKG_SECTION.$PKG_NAME
 }
 
 make_target() {

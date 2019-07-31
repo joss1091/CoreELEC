@@ -12,7 +12,6 @@ PKG_DEPENDS_TARGET="toolchain Python2 module.dateutil"
 PKG_LONGDESC="netflix VOD"
 PKG_TOOLCHAIN="manual"
 
-#PKG_MAKE_OPTS_TARGET="DISTRONAME=$DISTRONAME ROOT_PASSWORD=$ROOT_PASSWORD"
 
 unpack() {
   mkdir -p $PKG_BUILD/addon

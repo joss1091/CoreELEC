@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 PKG_NAME="kodi-theme-BlueTelecable"
-PKG_VERSION="dc75c652c142b7a7fa4272bd8f14e62cce90dbc5"
+PKG_VERSION="9f1f2ca20cb68bacff16401b47c8541b0158c7a6"
 PKG_LICENSE="GPL"
 PKG_SITE="https://gitlab.com/tvstream-iptv/skin.blue.telecable"
 PKG_URL="https://gitlab.com/tvstream-iptv/skin.blue.telecable/-/archive/master/$PKG_VERSION.tar.gz"

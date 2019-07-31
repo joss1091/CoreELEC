@@ -7,7 +7,8 @@ PKG_VERSION=""
 PKG_LICENSE="GPL"
 PKG_SITE="https://libreelec.tv"
 PKG_URL=""
-PKG_DEPENDS_TARGET="toolchain $MEDIACENTER pvr.livestreamclient module.inputstreamhelper inputstream.adaptive inputstream.rtmp language.es_mx autocompletion openvfd vfd"
+PKG_DEPENDS_BLUEROBOT="subscription codegen sleep.playback repository.bluerobot pvr.livestreamclient"
+PKG_DEPENDS_TARGET="toolchain $PKG_DEPENDS_BLUEROBOT $MEDIACENTER  module.inputstreamhelper inputstream.adaptive inputstream.rtmp language.es_mx autocompletion openvfd vfd"
 PKG_SECTION="virtual"
 PKG_LONGDESC="Mediacenter: Metapackage"
 
@@ -28,6 +29,8 @@ if [ "$MEDIACENTER" = "kodi" ]; then
 
 # settings addon
   if [ -n "$DISTRO_PKG_SETTINGS" ]; then
+    echo $PKG_DEPENDS_TARGET
+    echo $DISTRO_PKG_SETTINGS
     PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET $DISTRO_PKG_SETTINGS"
   fi
 

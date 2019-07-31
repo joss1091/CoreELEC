@@ -12,7 +12,7 @@ PKG_DEPENDS_TARGET="toolchain Python2 "
 PKG_LONGDESC="CoreELEC-settings: is a settings dialog for CoreELEC"
 PKG_TOOLCHAIN="manual"
 
-#PKG_MAKE_OPTS_TARGET="DISTRONAME=$DISTRONAME ROOT_PASSWORD=$ROOT_PASSWORD"
+
 
 unpack() {
   mkdir -p $PKG_BUILD/addon

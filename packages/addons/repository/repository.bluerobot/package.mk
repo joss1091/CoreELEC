@@ -3,12 +3,12 @@
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="repository.bluerobot"
-PKG_VERSION="1.0"
+PKG_VERSION="aad484761b92427266c3f0073360d95bf48c4f45"
 PKG_REV="1"
-PKG_ARCH="none"
+PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://www.tvstream.mx"
-PKG_URL=""
+PKG_URL="https://github.com/joss1091/repository.bluerobot/archive/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain"
 PKG_SECTION=""
 PKG_SHORTDESC="Bluerobot add-on repository"
@@ -19,13 +19,21 @@ PKG_IS_ADDON="yes"
 PKG_ADDON_NAME="Bluerobot Repository"
 PKG_ADDON_TYPE="xbmc.addon.repository"
 
+
+unpack() {
+  mkdir -p $PKG_BUILD/addon
+  tar --strip-components=1 -xf $SOURCES/$PKG_NAME/$PKG_NAME-$PKG_VERSION.tar.gz -C $PKG_BUILD/addon
+
+}
+
 make_target() {
   sed -e "s|@PKG_VERSION@|$PKG_VERSION|g" \
       -e "s|@PKG_REV@|$PKG_REV|g" \
       -i addon.xml
 }
 
-addon() {
-  mkdir -p $ADDON_BUILD/$PKG_ADDON_ID
-  cp -R $PKG_BUILD/* $ADDON_BUILD/$PKG_ADDON_ID
+makeinstall_target() {
+  mkdir -p $INSTALL/usr/share/kodi/addons/${PKG_NAME}
+  cp -rP $PKG_BUILD/addon/${PKG_NAME}/* $INSTALL/usr/share/kodi/addons/${PKG_NAME}
 }
+

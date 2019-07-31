@@ -13,7 +13,6 @@
 		</extension>
     <extension point="xbmc.addon.metadata">
 			<summary lang="en">Official Repository of Bluerobot</summary>
-			<summary lang="de">Offizielles Repository der Kodinerds</summary>
 			<description lang="en">This is the official Repository of Bluerobot</description>
 			<description lang="de"></description>
 			<disclaimer></disclaimer>

@@ -1,6 +1,6 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: GPL-2.0-or-later
 # Copyright (C) 2009-2016 Stephan Raue (stephan@openelec.tv)
-# Copyright (C) 2017-present Team LibreELEC (https://libreelec.tv)
+# Copyright (C) 2017-2019 Team LibreELEC (https://libreelec.tv)
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.tv)
 
 PKG_NAME="kodi"
@@ -12,21 +12,27 @@ PKG_LONGDESC="A free and open source cross-platform media player."
 PKG_PATCH_DIRS="$KODI_VENDOR"
 
 case $KODI_VENDOR in
+  amlogic-4.9)
+    PKG_VERSION="418c88af6e4afea43a10914900e3f8f44045d420"
+    PKG_SHA256="637c76c6898e916b7d645c1084b6c3fc1fab536476cbed49491b10053c4e4e13"
+    PKG_URL="https://github.com/CoreELEC/xbmc/archive/$PKG_VERSION.tar.gz"
+    PKG_SOURCE_NAME="kodi-$PKG_VERSION.tar.gz"
+    ;;
   raspberrypi)
-    PKG_VERSION="newclock5_18.1-Leia"
-    PKG_SHA256="22a46122a8e6f5a6507baae8e6be6beaf5a4203358478c94da525187b0681b99"
+    PKG_VERSION="newclock5_18.3-Leia"
+    PKG_SHA256="7e7a89a66a1921b0fa32478277d11361b3c7a04aea88784bac668b300b182298"
     PKG_URL="https://github.com/popcornmix/xbmc/archive/$PKG_VERSION.tar.gz"
     PKG_SOURCE_NAME="kodi-$KODI_VENDOR-$PKG_VERSION.tar.gz"
     ;;
   rockchip)
-    PKG_VERSION="rockchip_18.1-Leia"
-    PKG_SHA256="974a3b273462e99eb405ab0c8aafff5890772cfb0088c2d852aea30917528199"
+    PKG_VERSION="rockchip_18.3-Leia"
+    PKG_SHA256="a9eb3f44b0c7ab409604a2de0c3469f88b20c5d4a69209c006ca4a61673db318"
     PKG_URL="https://github.com/kwiboo/xbmc/archive/$PKG_VERSION.tar.gz"
     PKG_SOURCE_NAME="kodi-$KODI_VENDOR-$PKG_VERSION.tar.gz"
     ;;
   *)
-    PKG_VERSION="18.1-Leia"
-    PKG_SHA256="bc1ef0e271d0b6ce2e1be7546ad4f7d330930d7631cc19a9bbc5f75ddc586166"
+    PKG_VERSION="18.3-Leia"
+    PKG_SHA256="4f265901c00f582beb8d6ad96c9c303e5ab82611e828c7121ae822b07c0915cc"
     PKG_URL="https://github.com/xbmc/xbmc/archive/$PKG_VERSION.tar.gz"
     PKG_SOURCE_NAME="kodi-$PKG_VERSION.tar.gz"
     ;;
@@ -42,9 +48,10 @@ configure_package() {
 
   PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET dbus"
 
-  if [ "$PROJECT" = "Amlogic" ]; then
-    PKG_PATCH_DIRS="amlogic"
+  if [ "$LINUX" = "amlogic-3.14" ]; then
+    PKG_PATCH_DIRS="amlogic-3.14 bluerobot"
   fi
+
 
   if [ "$DISPLAYSERVER" = "x11" ]; then
     PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET libX11 libXext libdrm libXrandr"
@@ -185,6 +192,10 @@ configure_package() {
     KODI_ARCH="-DWITH_CPU=$TARGET_ARCH"
   else
     KODI_ARCH="-DWITH_ARCH=$TARGET_ARCH"
+  fi
+
+  if [ "$PROJECT" = "Amlogic" -o "$PROJECT" = "Amlogic-ng" ]; then
+    PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET amlogic-displayinfo-addon"
   fi
 
   if [ "$DEVICE" = "Slice" -o "$DEVICE" = "Slice3" ]; then
@@ -359,23 +370,22 @@ post_makeinstall_target() {
 	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.ghost" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
 	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "skin.blue.telecable" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
 	xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.openvfd" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+  xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.subscription" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+  xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.sleep.playback" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+  xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.codegen" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
+  xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "repository.bluerobot" -i '/addons/addon[last()]' -t attr -n optional -v true $ADDON_MANIFEST
 
 
   if [ "$DRIVER_ADDONS_SUPPORT" = "yes" ]; then
     xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.program.driverselect" $ADDON_MANIFEST
   fi
 
-  if [ "$DEVICE" = "Slice" -o "$DEVICE" = "Slice3" ]; then
-    xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.slice" $ADDON_MANIFEST
+  if [ "$PROJECT" = "Amlogic-ng" -o "$PROJECT" = "Amlogic" ]; then
+    xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "script.amlogic.displayinfo" $ADDON_MANIFEST
   fi
 
-  if [ -d $ROOT/addons ]; then
-    mkdir -p $INSTALL/usr/share/kodi/addons
-    for i in `ls $ROOT/addons | grep zip`
-    do
-      unzip $ROOT/addons/$i -d $INSTALL/usr/share/kodi/addons
-      xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "`unzip -p $ROOT/addons/$i */addon.xml | awk -F= '/addon\ id=/ { print $2 }' | awk -F'"' '{ print $2 }'`" $ADDON_MANIFEST
-    done
+  if [ "$DEVICE" = "Slice" -o "$DEVICE" = "Slice3" ]; then
+    xmlstarlet ed -L --subnode "/addons" -t elem -n "addon" -v "service.slice" $ADDON_MANIFEST
   fi
 
   # more binaddons cross compile badness meh

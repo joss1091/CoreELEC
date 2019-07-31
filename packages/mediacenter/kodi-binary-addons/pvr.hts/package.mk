@@ -3,12 +3,12 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="pvr.hts"
-PKG_VERSION="2b7348aff8172dd211d2cee608bdee711d995218"
-PKG_SHA256="6861e3bad2efaf8cfa49db7ac84082d47ccaf6d5430477917c42c09215107840"
-PKG_REV="0"
+PKG_VERSION="4.4.18-Leia"
+PKG_SHA256="1a5ee260f0e9ca597376ca6d9014c922116a3739e1bbf53ce7de7a715b2aecfe"
+PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_SITE="http://www.kodi.tv"
+PKG_SITE="https://github.com/kodi-pvr/pvr.hts"
 PKG_URL="https://github.com/kodi-pvr/pvr.hts/archive/$PKG_VERSION.tar.gz"
 PKG_DEPENDS_TARGET="toolchain kodi-platform"
 PKG_SECTION=""
