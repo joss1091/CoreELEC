@@ -102,6 +102,7 @@ post_makeinstall_target() {
 *		rc-xbox-dvd	xbox_dvd
 # multi-table for amlogic devices
 meson-ir	*		libreelec_multi
+
 EOF
 
   fi

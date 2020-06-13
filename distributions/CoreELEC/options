@@ -235,4 +235,4 @@
   IR_REMOTE_PROTOCOLS="RC6 NEC"
 
 # IR remote keymaps supported in default config
-  IR_REMOTE_KEYMAPS="rc6_mce xbox_360 xbox_one a95x tanix"
+  IR_REMOTE_KEYMAPS="rc6_mce xbox_360 xbox_one a95x tanix custom1 custom2"
