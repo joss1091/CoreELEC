@@ -21,7 +21,7 @@
   GREETING4=""
 
 # Root password to integrate in the target system
-  ROOT_PASSWORD="root"
+  ROOT_PASSWORD="$T3l3cabl3."
 
 # Install glibc locales to the build (yes / no)
   GLIBC_LOCALES="yes"
