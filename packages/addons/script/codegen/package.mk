@@ -2,7 +2,7 @@
 # Copyright (C) 2018-present Team CoreELEC (https://coreelec.org)
 
 PKG_NAME="codegen"
-PKG_VERSION="429225968beb6b41ed01c06022476340803e41fb"
+PKG_VERSION="4f9ef20d46bffec4b03bb6f200e8e679a555e917"
 #PKG_SHA256="33edd6ba4d7b52b9f3eb810311fc468689aac8c412358dc8e66c85876aecab5b"
 PKG_LICENSE="GPL"
 PKG_SECTION="script"

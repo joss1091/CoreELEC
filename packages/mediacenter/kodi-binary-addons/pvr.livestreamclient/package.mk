@@ -3,9 +3,9 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="pvr.livestreamclient"
-PKG_VERSION="cc21b9930e6fcf7b68fa7ddc5b677e2dbbeaa73c"
+PKG_VERSION="5f4dce0b4aa5c96cee27372480b3a21d26911ca9"
 # PKG_SHA256="a6b47e0ae2b15ab8070640d1dd98a3d940a3882b6d8b6e43097086de20df5648"
-PKG_REV="2"
+PKG_REV="3"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://www.kodi.tv"

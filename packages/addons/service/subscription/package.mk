@@ -2,7 +2,7 @@
 # Copyright (C) 2018-present Arthur Liberman (arthur_liberman@hotmail.com)
 
 PKG_NAME="subscription"
-PKG_VERSION="8c4f6b2d2aa21ec1af8112880828b9728f28ab7f"
+PKG_VERSION="ef9d327d5e3efe3105e9ce00b25b9784892c5fe7"
 #PKG_SHA256="ea96288f9fb68f8c3b1b0b746892e81f9a2f1746a5bde54ea9af57c954a7fb6e"
 PKG_LICENSE="GPLv3"
 PKG_SITE="https://gitlab.com/tvstream-iptv/service.subscription"
