@@ -9,7 +9,7 @@
 
 # Name of the Distro to build (full name, without special characters)
   DISTRONAME="BluerobotElec"
-
+ 
 # short project description
   DESCRIPTION="CoreELEC is a fast and user-friendly Kodi Entertainment Center distribution based on LibreELEC (https://libreelec.tv)."
 
@@ -21,7 +21,7 @@
   GREETING4=""
 
 # Root password to integrate in the target system
-  ROOT_PASSWORD="$T3l3cabl3."
+  ROOT_PASSWORD="t3l3cabl3"
 
 # Install glibc locales to the build (yes / no)
   GLIBC_LOCALES="yes"
@@ -235,4 +235,4 @@
   IR_REMOTE_PROTOCOLS="RC6 NEC"
 
 # IR remote keymaps supported in default config
-  IR_REMOTE_KEYMAPS="rc6_mce xbox_360 xbox_one a95x tanix custom1 custom2"
+  IR_REMOTE_KEYMAPS="channels rc6_mce xbox_360 xbox_one a95x tanix custom1 custom2"
